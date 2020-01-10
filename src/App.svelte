@@ -6,7 +6,7 @@
   const DAYS_IN_WEEK = 7;
   const dateFormat = "Do MMM";
   const dayFormat = "ddd";
-  const currentDayIndex = 3;
+  const currentDayIndex = moment().day();
 
   const daysMoment = new Array(DAYS_IN_WEEK)
     .fill(undefined)
