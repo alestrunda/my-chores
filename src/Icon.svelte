@@ -23,8 +23,8 @@
           transform: scale(${t});
         `;
       }
-    }
-  }
+    };
+  };
 </script>
 
 <style>
@@ -69,10 +69,17 @@
     transform: translate(-50%, -50%) rotate(45deg);
     content: "";
   }
-  .icon--clickable {
+  .icon-wrapper {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px 15px;
+  }
+  .icon-wrapper--clickable {
     cursor: pointer;
   }
-  .icon--clickable:hover {
+  .icon-wrapper--clickable:hover .icon {
     transform: scale(1.3);
   }
   .icon--empty {
@@ -97,8 +104,7 @@
 </style>
 
 <div
-  in:fade
-  out:fadeAbs
-  on:click={handleClick}
-  class="icon {isClickable ? 'icon--clickable' : ''}
-  {className ? className : ''}" />
+  class="icon-wrapper {isClickable ? 'icon-wrapper--clickable' : ''}"
+  on:click={handleClick}>
+  <div in:fade out:fadeAbs class="icon {className ? className : ''}" />
+</div>

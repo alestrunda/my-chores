@@ -100,11 +100,16 @@
     justify-content: center;
     flex-direction: column;
     flex-grow: 1;
-    padding: 12px 15px;
     width: 10%;
   }
   .row-items--border .row-items__item:not(:last-of-type) {
     border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .row-items__item--highlight {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+  .row-items__item--padding {
+    padding: 12px 15px;
   }
   .row-items__item--title {
     text-align: left;
@@ -119,9 +124,13 @@
   <main class="page-content">
     {#each chores as chore}
       <div class="row-items row-items--border">
-        <div class="row-items__item row-items__item--title">{chore.label}</div>
+        <div
+          class="row-items__item row-items__item--title row-items__item--padding">
+          {chore.label}
+        </div>
         {#each daysMoment as _, index}
-          <div class="row-items__item">
+          <div
+            class="row-items__item {currentDayIndex === index ? 'row-items__item--highlight' : ''}">
             {#if chore.days[index]}
               {#if data[index] && data[index][chore.label]}
                 <Icon
@@ -147,8 +156,9 @@
   <footer class="page-footer">
     <div class="row-items">
       <div class="row-items__item row-items__item--title" />
-      {#each daysMoment as day}
-        <div class="row-items__item">
+      {#each daysMoment as day, index}
+        <div
+          class="row-items__item row-items__item--padding {currentDayIndex === index ? 'row-items__item--highlight' : ''}">
           <div class="date">{day.format(dateFormat)}</div>
           <div class="date-day">{day.format(dayFormat)}</div>
         </div>
