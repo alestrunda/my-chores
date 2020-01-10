@@ -4,6 +4,10 @@ export default [
     days: [0, 1, 2, 3, 4, 5, 6]
   },
   {
+    label: "Practice English",
+    days: [0, 1, 2, 3, 4, 5, 6]
+  },
+  {
     label: "Read articles on medium",
     days: [0, 1, 2, 3, 4, 5, 6]
   },
