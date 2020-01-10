@@ -15,10 +15,10 @@
       css: t => {
         return `
           position: absolute;
-          top: 50%;
-          left: 50%;
-          margin-top: -14px;
-          margin-left: -14px;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
           opacity: ${t};
           transform: scale(${t});
         `;
@@ -105,6 +105,8 @@
 
 <div
   class="icon-wrapper {isClickable ? 'icon-wrapper--clickable' : ''}"
-  on:click={handleClick}>
-  <div in:fade out:fadeAbs class="icon {className ? className : ''}" />
+  on:click={handleClick}
+  in:fade
+  out:fadeAbs>
+  <div class="icon {className ? className : ''}" />
 </div>
