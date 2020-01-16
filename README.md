@@ -4,7 +4,7 @@ Simple app to see how you're doing with your chores. Shows chores for one week. 
 
 User data are saved in local storage. Clears the data with every new week.
 
-[Online](https://thirsty-shockley-cb0843.netlify.com/)
+[Online](https://my-chores.netlify.com/)
 
 To edit the chores check src/chores.js
 
