@@ -1,4 +1,4 @@
-# My Chores
+# My Choresss
 
 Simple app to see how you're doing with your chores. Shows chores for one week. Build using Svelte.
 
