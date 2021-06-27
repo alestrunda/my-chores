@@ -1,18 +1,18 @@
 # My Choresss
 
-Simple app to see how you're doing with your chores. Shows chores for one week. Build using Svelte.
+Simple app to see how you're doing with your chores every week. Build using **Svelte**. Based on [Svelte](https://svelte.dev) template.
 
-User data are saved in local storage. Clears the data with every new week.
+User data are saved in local storage. Clears the data every new week.
 
-[Online](https://my-chores.netlify.com/)
+**[Online](https://my-chores.netlify.com/)**
 
-To edit the chores check src/chores.js
-
-Created from [Svelte](https://svelte.dev) template.
+## Screenshots
 
 ![screen](http://files.alestrunda.cz/my-chores/1.jpg)
 
 ## Get started
+
+Set your chores in `src/chores.js`.
 
 Install the dependencies...
 
